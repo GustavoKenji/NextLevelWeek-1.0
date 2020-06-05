@@ -1,11 +1,13 @@
 import React from 'react';
+import { FiLogIn } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 import './style.css';
 
 import logo from '../../assets/logo.svg';
 
 const Home = () => {
-  return(
+  return (
     <div id="page-home">
       <div className="content">
         <header>
@@ -14,18 +16,20 @@ const Home = () => {
 
         <main>
           <h1>Seu marketplace de coleta de resíduos.</h1>
-          <p>Ajudamos pessas a encontrarem pontos de coleta de forma eficiente.</p>
+          <p>
+            Ajudamos pessas a encontrarem pontos de coleta de forma eficiente.
+          </p>
 
-          <a href="/cadastro">
+          <Link to="/create-point">
             <span>
-              >
+              <FiLogIn />
             </span>
             <strong>Cadastre um ponto de coleta</strong>
-          </a>
+          </Link>
         </main>
       </div>
     </div>
-  )
+  );
 };
 
 export default Home;
